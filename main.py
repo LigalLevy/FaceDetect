@@ -13,7 +13,7 @@ def home():
 
 @app.route("/detectfaces/url=<path:url>")
 def face_detect(url):
-    image_path = downloader.down(url)
+    image_path = downloader.download_img(url)
     faces_count = face_detect_cv3.face_detect(image_path)
     return faces_count
 
